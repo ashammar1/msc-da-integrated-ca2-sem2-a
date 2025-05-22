@@ -1,0 +1,19 @@
+// Assignment Data Pipeline
+digraph {
+	A [label="Explore the Data"]
+	B [label="Store stock data on Cassandra"]
+	C [label="Store stock tweets on MongoDB"]
+	D [label="Use Spark to process and merge data"]
+	E [label="Store merged dataset into Cassandra"]
+	F [label="Export merged data to CSV"]
+	G [label="Use YCSB for benchmarking"]
+	H [label="Use Kafka for data streamlining"]
+	A -> B
+	A -> C
+	B -> D
+	C -> D
+	D -> E
+	E -> F
+	E -> G
+	E -> H
+}
